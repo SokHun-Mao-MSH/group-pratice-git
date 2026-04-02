@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <title>តេស្ត Git Strategy</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            transition: 0.3s;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+        /* ---------------------------------------------------------
+           [1] កន្លែងសម្រាប់ផាស FEATURE របស់សមាជិក A
+           --------------------------------------------------------- */
+        body.dark {
+            background: #222;
+            color: #fff;
+        }
+
+        body.dark .box {
+            border-color: #555;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>សាកល្បង Git Flow (២ នាក់)</h2>
+        <p id="msg">កំពុងដំណើរការ...</p>
+        <h3 id="total">សរុបប្រាក់៖ កំពុងគណនា...</h3>
+
+    </div>
+
+    <script>
+        document.getElementById("msg").innerText = "ស្វាគមន៍មកកាន់ការតេស្ត Git Strategy!";
+
+        function toggleDark() {
+            /* -----------------------------------------------------
+               [3] កន្លែងសម្រាប់ផាស BUGFIX ពេលធ្វើ Release
+               ----------------------------------------------------- */
+               document.body.classList.toggle('dark');
+        }
+
+        function calculateTotal(price, tax) {
+            /* -----------------------------------------------------
+               [4] កន្លែងសម្រាប់ផាស HOTFIX ពេលកូដដើរខុស
+               ----------------------------------------------------- */
+            return price * tax; // ⚠️ កូដដើមនេះខុស ត្រូវចាំធ្វើ Hotfix កែវា
+        }
+
+        let finalAmount = calculateTotal(100, 0.1);
+        document.getElementById("total").innerText = "សរុបប្រាក់៖ " + finalAmount + "$";
+    </script>
+</body>
+
+</html>
+
+
+<button onclick="toggleDark()" style="padding: 10px 20px; cursor: pointer;">ប្តូរពណ៌ (Dark Mode)</button>

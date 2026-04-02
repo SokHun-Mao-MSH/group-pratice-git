@@ -1,0 +1,22 @@
+👉 សម្រាប់ សមាជិក A (យកទៅផាសត្រង់កន្លែងលេខ [1])៖
+/* 🚀 FEATURE: កូដពណ៌ CSS សម្រាប់ Dark Mode (ដោយ សមាជិក A) */
+body.dark { background: #222; color: #fff; }
+body.dark .box { border-color: #555; background: #333; }
+
+
+
+⚠️ វគ្គទី ២៖ ធ្វើ BUGFIX (ពេលបង្កើត Release Branch)
+----------------------------------------------------------------------
+👉 យកទៅផាសត្រង់កន្លែងលេខ [3] ក្នុង function toggleDark()៖
+// ⚠️ BUGFIX: កូដបញ្ជាឱ្យប្តូរពណ៌ background ពេលចុចប៊ូតុង
+document.body.classList.toggle('dark');
+
+
+
+🚨 វគ្គទី ៣៖ ធ្វើ HOTFIX (កែកូដខុសបន្ទាន់នៅលើ Main)
+----------------------------------------------------------------------
+👉 យកទៅផាសត្រង់កន្លែងលេខ [4] ក្នុង function calculateTotal()៖
+// 🚨 HOTFIX: រូបមន្តគណនាលុយដែលបានកែសម្រួលត្រូវឡើងវិញ
+return price + (price * tax); 
+
+-->
